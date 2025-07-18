@@ -35,10 +35,10 @@ jobs:
 
       - name: 📁 Prepare deploy folder with only needed files
         run: |
-          # Create the deploy folder, then copy the contents of the desired directories
-          mkdir -p deploy-folder/public deploy-folder/resources deploy-folder/app deploy-folder/routes
-          
-          # Copy only the contents of the directories into deploy-folder
+          # Create the parent directories
+          mkdir -p deploy-folder/public/build deploy-folder/resources deploy-folder/app deploy-folder/routes
+
+          # Copy the contents of each directory to the deploy-folder
           cp -r public/build/* deploy-folder/public/build/
           cp -r resources/* deploy-folder/resources/
           cp -r app/* deploy-folder/app/
