@@ -1,31 +1,63 @@
-# name: FTP Deploy
+name: FTP Deploy
 
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
 
-# jobs:
-#   ftp-deploy:
-#     name: Upload files via FTP
-#     runs-on: ubuntu-latest
+jobs:
+  ftp-deploy:
+    name: Upload files via FTP
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: 🧾 Checkout code
-#         uses: actions/checkout@v3
+    steps:
+      - name: 🧾 Checkout code
+        uses: actions/checkout@v3
 
-#       - name: 📂 FTP Deploy
-#         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-#         with:
-#           server: ${{ secrets.FTP_SERVER }}
-#           username: ${{ secrets.FTP_USERNAME }}
-#           password: ${{ secrets.FTP_PASSWORD }}
-#           local-dir: ./ # Change to your build directory if needed (e.g., `dist/`, `public/`)
-#           server-dir: /public_html/ # FTP root directory path
-#           exclude: |
-#             **/.git*
-#             **/.github*
-#             **/node_modules/*
-#             **/.env
-#             **/.gitignore
-#             **/.gitattributes
+      - name: 🧩 Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+          extensions: mbstring, intl, zip, fileinfo, curl
+          tools: composer:v2
+
+      - name: 🛠️ Create temporary .env file for build
+        run: |
+          echo "APP_NAME=Laravel" > .env
+          echo "APP_ENV=local" >> .env
+          echo "APP_URL=http://localhost" >> .env
+          echo "APP_KEY=base64:dummyKeyForBuildOnlyDontUseInProd==" >> .env
+          echo "APP_DEBUG=false" >> .env
+          echo "LOG_CHANNEL=stack" >> .env
+
+      - name: 📦 Install Composer Dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: 📁 Prepare deploy folder with only needed files
+        run: |
+          mkdir deploy-folder
+          cp -r public/build deploy-folder/public_build
+          cp -r resources deploy-folder/resources
+          cp -r app deploy-folder/app
+          cp -r routes deploy-folder/routes
+
+      - name: 📂 FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./deploy-folder
+          server-dir: /public_html/
+          exclude: |
+            .git*
+            .github*
+            node_modules*
+            vendor*
+            tests*
+            .env
+            .gitattributes
+            .gitignore
+            
+      - name: 🧹 Cleanup
+        run: rm -f .env
