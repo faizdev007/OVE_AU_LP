@@ -35,7 +35,7 @@ jobs:
 
       - name: 📁 Prepare deploy folder with only needed files
         run: |
-          mkdir deploy-folder
+          mkdir deploy-folder/public
           cp -r public/build deploy-folder/public_build
           cp -r resources deploy-folder/resources
           cp -r app deploy-folder/app
@@ -47,7 +47,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./deploy-folder
+          local-dir: ./deploy-folder/
           server-dir: /public_html/
           exclude: |
             .git*
