@@ -35,11 +35,14 @@ jobs:
 
       - name: 📁 Prepare deploy folder with only needed files
         run: |
+          # Create the deploy folder, then copy the contents of the desired directories
           mkdir -p deploy-folder/public deploy-folder/resources deploy-folder/app deploy-folder/routes
-          cp -r public/build deploy-folder/public/build
-          cp -r resources deploy-folder/resources
-          cp -r app deploy-folder/app
-          cp -r routes deploy-folder/routes
+          
+          # Copy only the contents of the directories into deploy-folder
+          cp -r public/build/* deploy-folder/public/build/
+          cp -r resources/* deploy-folder/resources/
+          cp -r app/* deploy-folder/app/
+          cp -r routes/* deploy-folder/routes/
 
       - name: 📂 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
