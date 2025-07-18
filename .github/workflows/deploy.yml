@@ -35,8 +35,8 @@ jobs:
 
       - name: 📁 Prepare deploy folder with only needed files
         run: |
-          mkdir deploy-folder/public
-          cp -r public/build deploy-folder/public_build
+          mkdir -p deploy-folder/public deploy-folder/resources deploy-folder/app deploy-folder/routes
+          cp -r public/build deploy-folder/public/build
           cp -r resources deploy-folder/resources
           cp -r app deploy-folder/app
           cp -r routes deploy-folder/routes
