@@ -9,20 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 use Illuminate\Support\Facades\Artisan;
-
-// Route::get('/relink-storage', function () {
-//     try {
-//         Artisan::call('storage:link');
-//         return '✅ Storage link created successfully.';
-//     } catch (\Exception $e) {
-//         return '❌ Error: ' . $e->getMessage();
-//     }
-// });
-
-// Route::get('/clear-config', function () {
-//     Artisan::call('optimize:clear');
-//     return '✅ Cache cleared';
-// });
+use Illuminate\Support\Facades\Redirect;
 
 Route::get('/run-queue', function () {
     abort_unless(request('key') === env('QUEUE_SECRET_KEY'), 403);
@@ -31,44 +18,25 @@ Route::get('/run-queue', function () {
     return 'Queue processed.';
 });
 
-// Route::get('/lp2', function () {
-//     return view('landing_pages.siliconvalley',[
-//         'lp_theme'=>'bacancy',
-//         'lp_data' =>[],
-//         'header'=> [
-//             'btntext'=>'Book a 30 mins strategy call',
-//             'menu'=>[
-//                 'Our Talent',
-//                 'Technical Stack',
-//                 'Success Stories',
-//                 'FAQs'
-//             ]
-//         ],
-//         'seo'=>[
-//             'metaTitle'=>'SaaS, Web & Mobile Development | eCommerce, UI/UX, API Integration Services - OVE',
-//             'metaDescription'=>'Partner with OVE for scalable SaaS solutions, custom web apps, mobile development, UI/UX design, and API integration. Book a free consultation today.',
-//         ]
-//     ]);
-// })->name('home');
-
 Route::get('/', function () {
-    return view('landing_pages.siliconvalley',[
-        'lp_theme'=>'siliconvalley',
-        'lp_data' =>[],
-        'header'=> [
-            'btntext'=>'Book a 30 mins strategy call',
-            'menu'=>[
-                'Our Talent',
-                'Technical Stack',
-                'Success Stories',
-                'FAQs'
-            ]
-        ],
-        'seo'=>[
-            'metaTitle'=>'SaaS, Web & Mobile Development | eCommerce, UI/UX, API Integration Services - OVE',
-            'metaDescription'=>'Partner with OVE for scalable SaaS solutions, custom web apps, mobile development, UI/UX design, and API integration. Book a free consultation today.',
-        ]
-    ]);
+    return Redirect::to('https://optimalvirtualemployee.com/');
+    // return view('landing_pages.siliconvalley',[
+    //     'lp_theme'=>'siliconvalley',
+    //     'lp_data' =>[],
+    //     'header'=> [
+    //         'btntext'=>'Book a 30 mins strategy call',
+    //         'menu'=>[
+    //             'Our Talent',
+    //             'Technical Stack',
+    //             'Success Stories',
+    //             'FAQs'
+    //         ]
+    //     ],
+    //     'seo'=>[
+    //         'metaTitle'=>'SaaS, Web & Mobile Development | eCommerce, UI/UX, API Integration Services - OVE',
+    //         'metaDescription'=>'Partner with OVE for scalable SaaS solutions, custom web apps, mobile development, UI/UX design, and API integration. Book a free consultation today.',
+    //     ]
+    // ]);
 })->name('home');
 
 Route::get('/thankyou',function(){
