@@ -45,6 +45,10 @@ jobs:
           cp -r app/* deploy-folder/app/
           cp -r routes/* deploy-folder/routes/
 
+          # Copy robots.txt from root and public
+          cp robots.txt deploy-folder/ || true
+          cp public/robots.txt deploy-folder/public/ || true
+
       - name: 📂 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
