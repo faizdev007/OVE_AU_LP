@@ -148,8 +148,9 @@
                     <h2 class="xl:text-3xl font-[900] text-white">{{$aiblock_title}}</h2>
                 </flux:heading>
                 <p class="mt-2 text-white text-3xl !font-[400] xl:text-4xl mb-6">{{$aiblock_watchword}}</p>
-                <p class="text-white text-lg xl:text-xl md:text-sm mb-6">{{$aiblock_subtitle}}</p>
+                <p class="text-white text-lg xl:text-xl md:text-sm mb-6">{{'We blend human skill with AI intelligence to boost productivity. Code is cleaner, testing is quicker, and rework is reduced. The outcome is software that’s ready to shine, faster than before.'}}</p>
             </div>
+            {{-- $aiblock_subtitle  --}}
             <flux:modal.trigger name="book-a-call">
                 <x-action-button x-data="" x-on:click.prevent="$dispatch('open-modal', 'book-a-call')" title="{{ $btntext }}" class="!text-white w-max !bg-black hover:!bg-gray-800 2xl:text-[1.5rem] focus:!ring-[#000000]" />
             </flux:modal.trigger>
