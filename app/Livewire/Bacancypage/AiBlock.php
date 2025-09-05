@@ -82,7 +82,7 @@ class AiBlock extends Component
         $aiblock = isset($this->pageContent['aiblock']) ? $this->pageContent['aiblock'] : [];
         $this->aiblock_title = isset($aiblock['aiblock_title']) ? $aiblock['aiblock_title'] : 'Speed Up Development with AI-Assisted Talent';
         $this->aiblock_watchword = isset($aiblock['aiblock_watchword']) ? $aiblock['aiblock_watchword'] : 'AI-Enhanced-Talent';
-        $this->aiblock_subtitle = isset($aiblock['aiblock_subtitle']) ? $aiblock['aiblock_subtitle'] : 'Our engineers use cutting-edge AI to supercharge coding, reduce bugs, and accelerate delivery.';
+        $this->aiblock_subtitle = isset($aiblock['aiblock_subtitle']) ? $aiblock['aiblock_subtitle'] : 'We blend human skill with AI intelligence to boost productivity. Code is cleaner, testing is quicker, and rework is reduced. The outcome is software that’s ready to shine, faster than before.';
         $this->logo_webp = isset($aiblock['logo_webp']) ? $aiblock['logo_webp'] : '/assets/AI/logo.webp';
         $this->ai_logo_one = isset($aiblock['ai_logo_one']) ? $aiblock['ai_logo_one'] : '/assets/AI/cursor.webp';
         $this->ai_logo_two = isset($aiblock['ai_logo_two']) ? $aiblock['ai_logo_two'] : '/assets/AI/githubcop.webp';
