@@ -64,8 +64,8 @@ class Herosection extends Component
         $this->hero_title_one = $this->hero['hero_title_one'] ?? 'Hire';
         $this->hero_title_two = $this->hero['hero_title_two'] ?? 'Software Developers';
         $this->hero_title_three = $this->hero['hero_title_three'] ?? '';
-        $this->hero_subtitle = $this->hero['hero_subtitle'] ?? 'Save up to 60% on hiring costs while building a high-performance tech team that runs on coffee & clean code';
-        $this->hero_lists = $this->hero['hero_lists'] ?? ['3x Faster Hiring – Interview top talent instantly.','Proven Success – 98% client retention','AI-Enabled Developers – Boost productivity with AI tools','100% IP Protection – Secure NDA and infrastructures','15+ Years of Experience – Trusted by Fortune 500'];
+        $this->hero_subtitle = $this->hero['hero_subtitle'] ?? 'Our fee $999(AUD) + Transparent staff salary as per actuals.';
+        $this->hero_lists = $this->hero['hero_lists'] ?? ['Include Recruitment Cost','Hardware & Infra Cost','Dedicated Delivery Manager','Payroll Management','Productivity tracking software','Performance & Training Support'];
         $this->btntext = $this->hero['btntext'] ?? 'Book a 30 mins strategy call';
         $this->box1 = $this->hero['box1'] ?? '15+';
         $this->boxtextone = $this->hero['boxtextone'] ?? 'Years of Industry Exp.';
