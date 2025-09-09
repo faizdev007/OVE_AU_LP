@@ -135,7 +135,7 @@
                 $profiles = $developer_list;
             @endphp
             <!-- Carousel -->
-            <x-auto-slider :cardmd="2" :cardlg="4" :cardxl="4" :card2xl="5" :autoSlide="true" :interval="8000">
+            <x-auto-slider :cardmd="2" :cardlg="4" :cardxl="4" :card2xl="6" :autoSlide="true" :interval="8000">
                 @foreach($profiles as $profile)
                     <x-bacancypage.profile-card :profile="$profile"/>
                 @endforeach

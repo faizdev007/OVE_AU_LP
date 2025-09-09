@@ -18,7 +18,7 @@
                             placeholder="SubTitle" ></textarea>
                         <div class="md:flex mb-3 p-2 bg-bacancy-primary rounded-full w-max px-8">
                             <input wire:model="btntitle" type="text"
-                                    class="bg-white md:text-md w-max bg-white xl:text-xl sm:text-sm text-xs text-black border p-0 px-2  border-bacancy-primary rounded-md w-full"
+                                    class="bg-white md:text-md w-max xl:text-xl sm:text-sm text-xs text-black border p-0 px-2  border-bacancy-primary rounded-md"
                                     placeholder="Button Text" />
                         </div>
                         <fieldset class="mb-4 border-2 border-black p-4">
@@ -122,7 +122,7 @@
                     </template>
                 </div>
             </div>
-            <div class="md:hidden block flex flex-col items-center">
+            <div class="md:hidden flex flex-col items-center">
                 <flux:subheading class="">
                     <p class="mt-2 text-black xl:text-xl md:text-sm mb-6 text-nowrap">{{$subtitle}}</p>
                 </flux:subheading>

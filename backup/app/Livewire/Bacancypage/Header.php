@@ -22,7 +22,8 @@ class Header extends Component
                                 'Our Talent',
                                 'Technical Stack',
                                 'Success Stories',
-                                'FAQs'
+                                'FAQs',
+                                'Pricing'
                             ];
     }
 

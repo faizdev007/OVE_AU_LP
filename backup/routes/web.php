@@ -18,7 +18,8 @@ Route::get('/', function () {
                 'Our Talent',
                 'Technical Stack',
                 'Success Stories',
-                'FAQs'
+                'FAQs',
+                'Pricing'
             ]
         ]
     ]);
@@ -43,7 +44,8 @@ Route::get('/{lp_data}',function(LandingPage $lp_data){
                 'Our Talent',
                 'Technical Stack',
                 'Success Stories',
-                'FAQs'
+                'FAQs',
+                'Pricing'
             ]]
     ]);
 })->name('showlandingpage');
