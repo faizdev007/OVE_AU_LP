@@ -64,8 +64,8 @@ class Herosection extends Component
         $this->hero_title_one = $this->hero['hero_title_one'] ?? 'Hire';
         $this->hero_title_two = $this->hero['hero_title_two'] ?? 'Software Developers';
         $this->hero_title_three = $this->hero['hero_title_three'] ?? '';
-        $this->hero_subtitle = 'Our fee just (AUD)$999/Month + Transparent staff salary as per actuals.';
-        $this->hero_lists = ['Include Recruitment Cost','Hardware & Infra Cost','Dedicated Delivery Manager','Payroll Management','Productivity tracking software','Performance & Training Support'];
+        $this->hero_subtitle = 'Flat AUD $999/month fee + transparent staff salaries as per actuals.';
+        $this->hero_lists = ['Include Recruitment Cost','Hardware & Infra Cost','Dedicated Delivery Manager','Payroll Management','Productivity tracking software'];
         $this->btntext = $this->hero['btntext'] ?? 'Book a 30 mins strategy call';
         $this->box1 = $this->hero['box1'] ?? '15+';
         $this->boxtextone = $this->hero['boxtextone'] ?? 'Years of Industry Exp.';
