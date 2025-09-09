@@ -1,5 +1,5 @@
 {{-- If your happiness depends on money, you will never be happy with yourself. --}}
-<div class="" section="GSH">
+<div class="py-12" section="GSH" id="GSH">
     @if(Route::currentRouteName() === 'create_lp_content' || Route::currentRouteName() === 'livewire.update' && auth()->check())
         <div class="py-4">
             <fieldset class="container relative max-w-6xl p-4 rounded mx-auto border-2 border-bacancy-primary">
