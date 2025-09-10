@@ -25,7 +25,7 @@
         <flux:header sticky class="border-b z-40 border-gray-500 bg-zinc-50">
             <div class="relative flex-1 gap-2 overflow-hidden mx-auto flex">
                 <a href="{{ url()->current() }}" class="flex md:pe-8 items-center space-x-2 rtl:space-x-reverse lg:ms-0" wire:navigate>
-                    <img src="{{ asset('assets/bacancy/logo.webp') }}" alt="{{ config('app.name') }}" class="md:h-14 h-10 w-auto" />
+                    <img src="{{ asset('assets/bacancy/logo.webp') }}" alt="{{ config('app.name') }}" class="md:h-12 h-10 w-auto" />
                 </a>
                 <nav class="items-center py-3 text-black text-xs xl:text-lg lg:flex hidden font-bold">
                     @foreach($header['menu'] as $key=>$link)
@@ -37,7 +37,7 @@
         
                 <!-- <flux:sidebar.toggle class="lg:hidden border !text-white !bg-bacancy-primary" icon="bars-3" inset="left" /> -->
                 
-                <flux:navbar class="-mb-px">
+                <flux:navbar class="-mb-px flex md:gap-3">
                     <a href="#GSH" class="inline-flex gap-2 items-center cursor-pointer uppercase justify-center md:p-3 p-2 font-medium text-black bg-white hover:text-white border border-bacancy-primary rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 2xl:text-[1.5rem] md:text-sm text-xs text-nowrap focus:!ring-[#1D4ED8]">Get Started</a>
                     <flux:modal.trigger name="book-a-call">
                         <button
@@ -51,9 +51,9 @@
                             <span id="responsive-text">
                                 {{ 'Schedule A Call' }}
                             </span>
-                            <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                            {{-- <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h4.59l-2.1 1.95a.75.75 0 0 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 1 0-1.02 1.1l2.1 1.95H6.75Z" clip-rule="evenodd" />
-                            </svg>
+                            </svg> --}}
                         </button>
                     </flux:modal.trigger>
                 </flux:navbar>
