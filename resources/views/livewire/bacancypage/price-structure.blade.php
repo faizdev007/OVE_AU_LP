@@ -22,7 +22,7 @@
     <div class="relative grid gap-4 px-4 py-2 sm:px-6 lg:px-8 overflow-hidden container mx-auto">
         <div class="w-full mx-auto">
             <flux:heading class="text-center">
-                <h2 class="text-3xl xl:text-[45px] font-extrabold text-gray-900 ">Choose the Right Pricing Plan for Your Custom Need</h2>
+                <h1 class="text-3xl xl:text-[45px] font-extrabold text-gray-900 ">Choose the Right Pricing Plan for Your Custom Need</h1>
             </flux:heading>
             <flux:subheading class="text-center">
                 <p class="mt-2 text-black xl:text-xl md:text-sm "><span class="underline">No hidden fees</span> — just simple, affordable pricing for teams of all sizes.</p>
@@ -30,10 +30,10 @@
         </div>
         <div class="grid md:grid-cols-3 md:divide-x divide-y md:divide-y-0 divide-black rounded-lg shadow drop-shadow-lg border border-black text-black">
             <div class="p-4 text-center flex h-full w-full items-center justify-center">
-                <h5 class="text-2xl font-bold">Talent on Demand</h5>
+                <h2 class="text-2xl font-bold">Talent on Demand</h2>
             </div>
             <div class="p-4 grid gap-4 text-center">
-                <h2 class="text-xl font-bold text-center"> Dedicated Developers</h2>
+                <h3 class="text-xl font-bold text-center"> Dedicated Developers</h3>
                 <div class="">
                     <h3><strong class="text-4xl font-bold">$999</strong></h3>
                     <h3><strong class="text-xl">Monthly ( AUD )</strong></h3>
@@ -71,10 +71,10 @@
         </div>
         <div class="grid md:grid-cols-3 md:divide-x divide-y md:divide-y-0 border bg-bacancy-primary rounded-lg shadow drop-shadow-lg text-white">
             <div class="p-4 text-center flex h-full w-full items-center justify-center">
-                <h5 class="text-2xl font-bold">Sprint Team</h5>
+                <h2 class="text-2xl font-bold">Sprint Team</h2>
             </div>
             <div class="p-4 flex flex-col justify-around gap-2 text-center">
-                <h2 class="text-xl font-bold text-center"> Team of 5 Developers</h2>
+                <h3 class="text-xl font-bold text-center"> Team of 5 Developers</h3>
                 <div class="">
                     <h3><strong class="text-4xl font-bold">$3999</strong></h3>
                     <h3><strong class="text-xl">Monthly ( AUD )</strong></h3>
@@ -111,7 +111,7 @@
             </div>
         </div>
         <div class="grid text-black rounded-lg shadow drop-shadow-lg border border-black p-4 text-center gap-4">
-            <h4 class="text-3xl font-bold text-center"> Can't Find the Right Plan?</h4>
+            <h2 class="text-3xl font-bold text-center"> Can't Find the Right Plan?</h2>
             <p>Let's Tailor One for You.</p>
             <div class="flex justify-center">
                 <flux:modal.trigger name="book-a-call">

@@ -20,7 +20,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="py-3 px-2 text-center">
-                    <h4 class="text-lg font-semibold">{{ $client['name'] }}</h4>
+                    <span class="text-lg font-semibold">{{ $client['name'] }}</span>
                     <p class="text-sm">{{ $client['title'] }}</p>
                 </div>
             </article>
