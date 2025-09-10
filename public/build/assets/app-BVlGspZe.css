@@ -8819,15 +8819,15 @@ select:focus[data-flux-control] {
 }
 
 .scaling_team {
-    background-image: url(/talktoexpertbg-pE2cEsLu.webp);
+    background-image: url(/build/assets/talktoexpertbg-pE2cEsLu.webp);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover
 }
 
 .azblockbg {
-    background-image: -webkit-image-set(url(/azblock-BTrPUJko.avif) 1x type("image/avif"), url(/azblock-D9xq-coM.webp) 1x type("image/webp"));
-    background-image: image-set(url(/azblock-BTrPUJko.avif) 1x type("image/avif"), url(/azblock-D9xq-coM.webp) 1x type("image/webp"));
+    background-image: -webkit-image-set(url(/build/assets/azblock-BTrPUJko.avif) 1x type("image/avif"), url(/build/assets/azblock-D9xq-coM.webp) 1x type("image/webp"));
+    background-image: image-set(url(/build/assets/azblock-BTrPUJko.avif) 1x type("image/avif"), url(/build/assets/azblock-D9xq-coM.webp) 1x type("image/webp"));
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover
@@ -8913,8 +8913,8 @@ select:focus[data-flux-control] {
 }
 
 .hiringline {
-    background-image: -webkit-image-set(url(/hireprocess-B9znzsKL.avif) 1x type("image/avif"), url(/hireprocess-DQan1VJf.webp) 1x type("image/webp"));
-    background-image: image-set(url(/hireprocess-B9znzsKL.avif) 1x type("image/avif"), url(/hireprocess-DQan1VJf.webp) 1x type("image/webp"));
+    background-image: -webkit-image-set(url(/build/assets/hireprocess-B9znzsKL.avif) 1x type("image/avif"), url(/build/assets/hireprocess-DQan1VJf.webp) 1x type("image/webp"));
+    background-image: image-set(url(/build/assets/hireprocess-B9znzsKL.avif) 1x type("image/avif"), url(/build/assets/hireprocess-DQan1VJf.webp) 1x type("image/webp"));
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain
